@@ -1,0 +1,25 @@
+PROJECT SOLO #0201 / MUGWUMP
+
+'player' is a structure of the form (x, y, found?)
+'players' is a set of four 'player's
+
+START
+fill 'players' with random positions (x, y)
+while current turn is under 10 AND not all players have been found:
+	ask user for a 'guess' in the form (x, y)
+	if the 'guess' matches a 'player' in 'players':
+		and if said 'player' has not been found yet:
+			mark this 'player' as found
+		else, if this 'player' has already been found:
+			say "already found"
+	say how far away from the 'guess' each unfound 'player' in 'players' is
+		using the pythagorean theroem (a^2 + b^2 = c^2)
+	if a 'player' has been found, say so instead
+outside of the main loop
+if not all 'player's in 'players' were found:
+	say "fail"
+	ask user if they want to know where each unfound 'player' was
+	if yes, say the x and y values of each 'player' in 'players'
+ask user if they want to replay
+if yes, go back to START
+END
